@@ -49,3 +49,13 @@
    So that I can customize my bookmarks to meet my specification,
    I would like to manage my bookmarks.
 ```
+
+## Domain Model
+
+```
+╔════════════╗         .all         ╔════════════╗
+║            ║--------------------->║            ║
+║ Controller ║ [array of bookmarks] ║  Bookmark  ║
+║            ║<---------------------║            ║
+╚════════════╝                      ╚════════════╝
+```
