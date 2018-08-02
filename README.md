@@ -11,7 +11,7 @@
 ```
 2) As a User,
    So that I can quickly access a new site,
-   I would like to add a new bookmarks.
+   I would like to add a new bookmark.
 ```
 
 ```
