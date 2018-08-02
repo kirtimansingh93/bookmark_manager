@@ -8,8 +8,10 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 # Require all the testing gems
 require 'capybara'
-require 'capybara/rspec'
 require 'rspec'
+require 'sinatra'
+require 'capybara/rspec'
+
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = BookmarkManager
