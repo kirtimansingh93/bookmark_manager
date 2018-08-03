@@ -1,12 +1,6 @@
-require 'setup_test_database.rb'
+require_relative 'setup_test_database.rb'
 
 ENV['ENVIRONMENT'] = 'test'
-
-RSpec.configure do |config|
-  config.before(:each) do
-    setup_test_database
-  end
-end
 
 # Set the environment to "test"
 # ENV['RACK_ENV'] = 'test'
@@ -19,7 +13,8 @@ require 'capybara'
 require 'rspec'
 require 'sinatra'
 require 'capybara/rspec'
-
+require 'sinatra/flash'
+require 'uri'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = BookmarkManager
@@ -47,6 +42,9 @@ Capybara.app = BookmarkManager
 
 
 RSpec.configure do |config|
+    config.before(:each) do
+      setup_test_database
+    end
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

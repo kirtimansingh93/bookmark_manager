@@ -2,11 +2,12 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+# git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 gem 'rspec'
 gem 'capybara'
-gem 'selenium-webdriver'
+# gem 'selenium-webdriver'
 gem 'sinatra'
 gem 'pg'
+gem 'sinatra-flash'

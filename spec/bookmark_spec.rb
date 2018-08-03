@@ -30,5 +30,10 @@ describe Bookmark do
 
     expect(Bookmark.all).to include 'http://www.testbookmark.com'
   end
-end
+  it 'does not create a new bookmark if the URL is not valid' do
+    Bookmark.create(url: 'invalid url')
+
+    expect(Bookmark.all).not_to include 'invalid url'
+  end
+ end
 end
